@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "msf"
+version = "0.1.0"
+description = ""
+authors = ["marek.tremel <tremelmarek@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+opencv-python = "^4.10.0.82"
+matplotlib = "^3.9.0"
+scipy = "^1.13.1"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
