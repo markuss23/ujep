@@ -11,9 +11,6 @@ opencv-python = "^4.10.0.82"
 matplotlib = "^3.9.0"
 scipy = "^1.13.1"
 plotly = "^5.22.0"
-nbconvert = "^7.16.4"
-notebook-as-pdf = "^0.5.0"
-pandoc = "^2.3"
 
 
 [tool.poetry.group.dev.dependencies]
