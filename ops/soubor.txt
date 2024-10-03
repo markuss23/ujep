@@ -1,0 +1,8 @@
+total 16
+-rw-rw-r-- 1 marek marek    0 srp 25 19:06 18
+-rw-rw-r-- 1 marek marek    0 srp 25 19:05 18]
+-rwxrwxrwx 1 marek marek    8 kvě 13 15:38 doc.txt
+drwxrwxr-x 2 marek marek 4096 kvě 13 15:21 obrazky
+-rwxrwxr-x 1 marek marek  699 kvě 13 15:47 script.sh
+-rw-rw-r-- 1 marek marek    0 srp 25 19:21 soubor.txt
+-rwxrwxrwx 1 marek marek  647 srp 25 19:21 ucimse.sh

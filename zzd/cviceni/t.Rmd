@@ -1,0 +1,6 @@
+```{r}
+library(dplyr)
+
+df <- read.csv("/home/marek/projects/ujep/zzd/cviceni/shootings.csv")
+
+```

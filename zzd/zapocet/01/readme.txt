@@ -1,0 +1,24 @@
+Úspěšně jste stáhli následující strukturované údaje
+
+•	YYYY MM/OBECID. csv/geojson (dále jen „soubor deliktů“, kde YYYY je zájmový rok; MM je zájmový měsíc; OBECID je 6-ti místné id RUIAN pro vybranou obec),
+•	readme.txt,
+•	states. csv/json (dále jen „soubor vývojových stádií deliktu“),
+•	types.csv/json (dále jen „soubor typů deliktů“),
+
+dále jen „soubory“ obsahujících informace o čase, místě a typu evidovaných přestupků či vybraných druzích trestných činů, které byly ve Vámi zvoleném období Policii České republiky oznámeny, nebo které Policie České republiky odhalila vlastní činností. Stádia jednotlivých deliktů a typy deliktů jsou popsány číselníky, jejichž položková skladba je obsažena v separátním souboru vývojových stádií deliktu a separátním souboru typů deliktů. Soubory tak tvoří logický celek, který je uživateli distribuován ve stavu, v jakém ho Policie ČR v momentu stažení evidovala. Vývoj jednotlivých deliktů i jejich popis je dynamický.Publikované informace se tak v prběhu času mohou měnit a jejich aktální verze je dostupná na serveru https://kriminalita.policie.cz
+ 
+Soubory obsahují ty druhy trestné činnosti, u nichž může mít zveřejnění preventivní charakter a jejich zveřejnění nebrání taktické hledisko činnosti Policie ČR. Typově se jedná např. o násilnou trestnou činnost, majetkovou trestnou činnost, extrémismus, drogovou kriminalitu atd. U přestupků není rozsah údajů tímto způsobem omezen.
+ 
+U trestných činů i přestupků odpovídají zobrazené informace poslednímu zjištěnému stavu věci v době, kdy bylo řízení vedeno Policií České republiky. V případě trestných činů tedy v souboru deliktů obsažené údaje nezohledňují případnou změnu právní kvalifikace protiprávního jednání provedenou státním zástupcem nebo soudcem ani způsob, jakým bylo trestní řízení pravomocně skončeno rozhodnutím státního zastupitelství nebo soudu. Do souboru deliktů se např. nepromítne skutečnost, že na základě informací získaných v průběhu trestního řízení státní zástupce učinil závěr, že se skutek Policií České republiky posouzený a v mapě zobrazovaný jako trestný čin vůbec nestal nebo že není trestným činem. 
+
+Z důvodu ochrany osobních údajů poškozených a prevence jejich sekundární viktimizace a dále z důvodu ochrany osobních údajů osob podezřelých ze spáchání trestného činu, kteří by mohli být zejména v malých obcích nebo v řídce obydlených oblastech identifikováni, nejsou v souboru deliktů záměrně zpřístupňovány informace o přesném místě spáchání trestného činu. 
+
+Z důvodu nerovnoměrného zatížení území trestnou činností a také v zájmu ochrany osobních údajů poškozených a podezřelých osob, které by mohly být identifikovány v případě zobrazení přesného místa spáchání skutku, bylo nutné území obcí rozčlenit, blíže ke způsobu rozdělení území níže. Tyto oblasti nekorespondují s členěním obcí na části obce či statutárních měst na městské obvody či městské části ve smyslu zákona č. 128/2000 Sb., o obcích (obecním zřízení).
+ 
+Polohy všech publikovaných deliktů jsou z výše uvedených důvodů geograficky zkresleny. Toho bylo dosaženo rozdělením jednotlivých obcí do tzv. Voroného polygonů s využitím funkce K-Means. Nejprve byl pro každou obec spočítán počet trestných činů geograficky spadající do obce za rok 2018. Všechny obce, kde byl počet deliktů menší než 25, byly ponechány bez dalšího rozdělení (celkem 2682 obcí). Pro zbývající obce byl využit algoritmus K-Means, jehož vstupním parametrem je počet výsledných klusterů. Tento počet byl pro každou obec zvolen následujícím způsobem. Typově bylo vybráno několik desítek obcí s různou intenzitou nápadu tréstné činnosti, u kterých byl ručně vyzkoušen vyhovující počet shluků a násleně byla na tomto základu vytvořena obecná funkce. U všech obcí byly následně vypočítány středy klusterů ze všech dat evidovaných policií včetně přestupků (cca 10 milionů bodů za ČR). Každé území obce bylo poté rozděleno do Voroného polygonů se středem ve středu klusteru v případě, že kluster shlukoval více než 2 delikty. Nakonec byly středy klusterů zkontrolovány, zda se nachází v příslušném polygonu (např. u vícedílných geometrií obce mohl střed klusteru ležet mimo území obce) a případně byly přesunuty na průsečík hranice obce s přímkou spojující kluster a váhový střed obce s mírným odsazením dovnitř obce. Geometrie všech deliktů byla pak přepočítána na příslušný střed polygonu, do kterého geograficky spadá.
+ 
+Anonymizované souřadnice jsou zapsány v souřadnicovém systému WGS-84, EPSG: 4326. Bližší informace naleznete na https://epsg.io/4326
+
+Data jsou distribuována v souladu se specifikací "Comma Separated Values - CSV" (RFC 4180), "The JavaScript Object Notation - JSON" (RFC 7159) a "The GeoJSON Specification" (RFC 7946). 
+
+Tato data lze dále v souladu s licencí  dále šířit, vždy je nutné uvést zdroj.

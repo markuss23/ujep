@@ -1,0 +1,51 @@
+from abc import ABC, abstractmethod
+
+class IChoditelne(ABC):
+	@abstractmethod
+	def doleva(self): ...
+
+	@abstractmethod
+	def doprava(self): ...
+	
+	@abstractmethod
+	def dopredu(self): ...
+
+	@abstractmethod
+	def dozadu(self): ...
+
+class Zamestnanec(ABC, IChoditelne):
+	def __init__(self, jmeno, prijmeni, email, tel):
+		self.jmeno = jmeno
+		self.prijmeni = prijmeni
+		self.email = email
+		self.tel = tel
+
+	def pozdrav(self):
+		return "cau"
+
+	@abstractmethod
+	def pracuj(self):
+		...
+
+class Programator(Zamestnanec):
+	def __init__(self, jmeno, prijmeni, email, tel, prog_jaz):
+		super().__init__(jmeno, prijmeni, email, tel)
+		self.prog_jaz = prog_jaz
+
+	def pracuj(self):
+		return f"Programuju v jazyce {self.prog_jaz}"
+
+class Uklizec(Zamestnanec):
+	def __init__(self, jmeno, prijmeni, email, tel, obl_koste):
+		super().__init__(jmeno, prijmeni, email, tel)
+		self.obl_koste = obl_koste
+
+	def pracuj(self):
+		return f"Pomoci meho kostete {self.obl_koste} metu"
+
+class UklizeciProgramator(Programator, Uklizec)
+
+p1 = Programator("pepa", "novak", "pepik@email.cz", "+420123456789", "python")
+p1.programuj()
+u1 = Uklizec("pepa", "nenovak", "nepepik@email.cz", "+420123456781", "nimbus2000")
+u1.uklizej()
