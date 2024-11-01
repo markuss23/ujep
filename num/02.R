@@ -17,7 +17,8 @@ for(k in 1:10){
 }
 solve(A,b)
 
-# jacobiho s vektoirzaci
+# GAUSS vektoritace
+
 for(k in 1:10){
   for( i in 1:n){
 
@@ -26,6 +27,14 @@ for(k in 1:10){
   # print(x)
 }
 
+# jacobiho s vektoirzaci
+for(k in 1:20){
+  for( i in 1:n){
+    
+    x[i] <- (b[i] - sum(A[i,]* x)+A[i,i]*x[i])/A[i,i]
+  }
+  # print(x)
+}
 
 
 
