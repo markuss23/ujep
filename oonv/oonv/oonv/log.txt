@@ -1,0 +1,6 @@
+[File] Logovací strategie změněna.
+[File] Úkol '1aaa' přidán.
+[File] Úkol 'asd' přidán.
+[File] Úkol 'aaaaaaaaa' přidán.
+[File] Úkol 'ahoj' přidán.
+[File] Zobrazení úkolů.
