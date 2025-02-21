@@ -1,5 +1,5 @@
 [tool.poetry]
-name = ""
+name = "uje"
 version = "0.1.0"
 description = ""
 authors = ["marek.tremel <tremelmarek@gmail.com>"]
@@ -11,6 +11,7 @@ numpy = "^2.1.1"
 matplotlib = "^3.9.2"
 scipy = "^1.14.1"
 pandas = "^2.2.3"
+scikit-learn = "^1.6.1"
 
 
 [tool.poetry.group.dev.dependencies]
